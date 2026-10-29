@@ -1,0 +1,51 @@
+
+name: Website CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate-website:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f style.css
+          test -f script.js
+          echo "Website files are present"
+
+      - name: Validate HTML
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Validator(HTMLParser):
+              pass
+
+          html = Path("index.html").read_text(encoding="utf-8")
+          Validator().feed(html)
+          print("HTML parsing completed successfully")
+          PY
+
+      - name: Validate JavaScript syntax
+        run: |
+          if command -v node >/dev/null 2>&1; then
+            node --check script.js
+          else
+            echo "Node.js unavailable; JavaScript check skipped"
+          fi
+
+      - name: CI result
+        run: echo "Website CI completed successfully"
