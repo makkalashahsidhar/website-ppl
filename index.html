@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium commercial properties and investment opportunities with Monarch Commercial Estates.">
+  <title>MONARCH | Luxury Commercial Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="brand">
+      <span class="brand-mark">M.</span>
+      <span>MONARCH<small>COMMERCIAL ESTATES</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation"
+      aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#properties">Properties</a>
+      <a href="#about">Our Expertise</a>
+      <a href="#contact">Contact</a>
+      <a href="#properties" class="nav-cta">Explore Collection ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">EXCEPTIONAL SPACES. EXTRAORDINARY VALUE.</p>
+        <h1>Where Business<br>Meets <em>Prestige.</em></h1>
+        <p class="hero-copy">
+          A curated collection of distinguished commercial properties
+          for businesses and investors who expect more.
+        </p>
+        <a href="#properties" class="gold-button">Discover Properties ↗</a>
+      </div>
+      <div class="hero-caption">REAL ESTATE, REDEFINED.</div>
+    </section>
+
+    <section class="stats" id="about">
+      <div><strong>120+</strong><span>Curated Properties</span></div>
+      <div><strong>15+</strong><span>Years of Expertise</span></div>
+      <div><strong>₹500Cr+</strong><span>Target Portfolio Value</span></div>
+    </section>
+
+    <section class="section" id="properties">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE EXCLUSIVE COLLECTION</p>
+          <h2>Spaces That <em>Make History.</em></h2>
+        </div>
+        <p>Find the right address for your next chapter.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-type="all">All Properties</button>
+        <button class="filter" data-type="office">Office</button>
+        <button class="filter" data-type="retail">Retail</button>
+        <button class="filter" data-type="industrial">Industrial</button>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card" data-type="office">
+          <div class="property-image tower">
+            <span class="tag">PREMIUM OFFICE</span>
+          </div>
+          <div class="property-info">
+            <p class="location">HYDERABAD · FINANCIAL DISTRICT</p>
+            <h3>The Aurelius Tower</h3>
+            <p>Grade A Office Space · 12,000 sq. ft.</p>
+            <div class="property-bottom">
+              <strong>Price on Request</strong>
+              <button class="enquire" data-property="The Aurelius Tower">
+                Enquire ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-type="retail">
+          <div class="property-image retail">
+            <span class="tag">SIGNATURE RETAIL</span>
+          </div>
+          <div class="property-info">
+            <p class="location">HYDERABAD · PRIME HIGH STREET</p>
+            <h3>The Grand Arcade</h3>
+            <p>Retail Investment · 5,500 sq. ft.</p>
+            <div class="property-bottom">
+              <strong>Price on Request</strong>
+              <button class="enquire" data-property="The Grand Arcade">
+                Enquire ↗
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card" data-type="industrial">
+          <div class="property-image industrial">
+            <span class="tag">INDUSTRIAL ASSET</span>
+          </div>
+          <div class="property-info">
+            <p class="location">HYDERABAD · GROWTH CORRIDOR</p>
+            <h3>The Meridian Hub</h3>
+            <p>Industrial Facility · 25,000 sq. ft.</p>
+            <div class="property-bottom">
+              <strong>Price on Request</strong>
+              <button class="enquire" data-property="The Meridian Hub">
+                Enquire ↗
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="disclaimer">
+        Demonstration listings only. Property names, areas, portfolio figures,
+        and locations must be verified before publication.
+      </p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <p class="eyebrow">YOUR NEXT INVESTMENT STARTS HERE</p>
+      <h2>Let's Find Your<br><em>Signature Property.</em></h2>
+      <p>Tell us what you are looking for. Our team will be in touch.</p>
+      <form id="enquiry-form">
+        <input id="name" placeholder="Your full name" required>
+        <input id="email" type="email" placeholder="Email address" required>
+        <select id="interest" required>
+          <option value="">Property interest</option>
+          <option>Office</option>
+          <option>Retail</option>
+          <option>Industrial</option>
+          <option>Investment</option>
+        </select>
+        <button type="submit" class="gold-button">Request a Consultation ↗</button>
+      </form>
+      <p id="form-message" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#" class="footer-brand">MONARCH.</a>
+    <p>Exceptional commercial real estate. Thoughtfully curated.</p>
+    <span>© <span id="year"></span> Monarch Commercial Estates</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
